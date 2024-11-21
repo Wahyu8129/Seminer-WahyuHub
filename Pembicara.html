@@ -5,6 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembicara</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px);
+}
+
+.navbar.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar a {
+    color: #d4d4d4;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.navbar a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.content {
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 80px auto;
+    max-width: 800px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.speaker {
+    margin-bottom: 20px;
+}
+
+input, button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+}
+
+input::placeholder {
+    color: #bbbbbb;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.login-box {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: 100px auto;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer {
+    background-color: #262626;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+}
+
+    </style>
 </head>
 <body>
 
