@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Description</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navbar = document.querySelector('.navbar');
+
+            menuIcon.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+            });
+
+            // Tooltip Functionality
+            const tooltips = document.querySelectorAll('.tooltip');
+
+            tooltips.forEach(function(tooltip) {
+                tooltip.addEventListener('mouseover', function() {
+                    const tooltipText = tooltip.querySelector('.tooltiptext');
+                    tooltipText.style.visibility = 'visible';
+                    tooltipText.style.opacity = '1';
+                });
+
+                tooltip.addEventListener('mouseout', function() {
+                    const tooltipText = tooltip.querySelector('.tooltiptext');
+                    tooltipText.style.visibility = 'hidden';
+                    tooltipText.style.opacity = '0';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Menu Icon -->
+    <img src="Strip.png" alt="Menu" class="menu-icon">
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="index.html" class="tooltip">
+            Home
+            <span class="tooltiptext">Go to Home Page</span>
+        </a>
+        <a href="deskripsi.html" class="tooltip">
+            Deskripsi
+            <span class="tooltiptext">Page Description</span>
+        </a>
+        <a href="pembicara.html" class="tooltip">
+            Pembicara
+            <span class="tooltiptext">Speakers Info</span>
+        </a>
+        <a href="pendaftaran.html" class="tooltip">
+            Pendaftaran
+            <span class="tooltiptext">Register Here</span>
+        </a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Page Description Section -->
+        <div id="page-description" class="section">
+            <h2>Seminar Online Modding Yu-Gi-Oh Master</h2>
+            <p>Ini adalah Seminar Online Yang Angkan Membahasa Cara Modding di Yu-Gi-Oh Master Duel 
+                Dan Mengpublikasikannya Ke Public Dengan Menggunakan NexusMods Yang Akan Di 
+                Hadiri Oleh Beberapa Mods Author Yg Sudah Tervifikasi di 
+                NexusMods Yang Sudah Tidak Kita Ragukan Lagi Keahliannya</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Contact me at <a href="https://github.com/Wahyu8129">My Github</a></p>
+    </div>
+
+</body>
+</html>
